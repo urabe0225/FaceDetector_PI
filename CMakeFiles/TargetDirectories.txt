@@ -1,0 +1,4 @@
+/home/hi-brain/workspace/FaceDetect/src/CMakeFiles/FaceDetect.dir
+/home/hi-brain/workspace/FaceDetect/src/CMakeFiles/FaceDetectComp.dir
+/home/hi-brain/workspace/FaceDetect/doc/CMakeFiles/doxygen_doc.dir
+/home/hi-brain/workspace/FaceDetect/CMakeFiles/uninstall.dir

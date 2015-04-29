@@ -1,0 +1,54 @@
+# FaceDetect CMake config file
+#
+# This file sets the following variables:
+# FaceDetect_FOUND - Always TRUE.
+# FaceDetect_INCLUDE_DIRS - Directories containing the FaceDetect include files.
+# FaceDetect_IDL_DIRS - Directories containing the FaceDetect IDL files.
+# FaceDetect_LIBRARIES - Libraries needed to use FaceDetect.
+# FaceDetect_DEFINITIONS - Compiler flags for FaceDetect.
+# FaceDetect_VERSION - The version of FaceDetect found.
+# FaceDetect_VERSION_MAJOR - The major version of FaceDetect found.
+# FaceDetect_VERSION_MINOR - The minor version of FaceDetect found.
+# FaceDetect_VERSION_REVISION - The revision version of FaceDetect found.
+# FaceDetect_VERSION_CANDIDATE - The candidate version of FaceDetect found.
+
+message(STATUS "Found FaceDetect-@PROJECT_VERSION@")
+set(FaceDetect_FOUND TRUE)
+
+find_package(<dependency> REQUIRED)
+
+#set(FaceDetect_INCLUDE_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@"
+#    ${<dependency>_INCLUDE_DIRS}
+#    )
+#
+#set(FaceDetect_IDL_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@/idl")
+set(FaceDetect_INCLUDE_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@"
+    ${<dependency>_INCLUDE_DIRS}
+    )
+set(FaceDetect_IDL_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@/idl")
+
+
+if(WIN32)
+    set(FaceDetect_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_STATIC_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+else(WIN32)
+    set(FaceDetect_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_SHARED_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+endif(WIN32)
+
+set(FaceDetect_DEFINITIONS ${<dependency>_DEFINITIONS})
+
+set(FaceDetect_VERSION @PROJECT_VERSION@)
+set(FaceDetect_VERSION_MAJOR @PROJECT_VERSION_MAJOR@)
+set(FaceDetect_VERSION_MINOR @PROJECT_VERSION_MINOR@)
+set(FaceDetect_VERSION_REVISION @PROJECT_VERSION_REVISION@)
+set(FaceDetect_VERSION_CANDIDATE @PROJECT_VERSION_CANDIDATE@)
+
