@@ -8,22 +8,6 @@ SET(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/hi-brain/workspace/FaceDetect")
 # Force unix paths in dependencies.
 SET(CMAKE_FORCE_UNIX_PATHS 1)
 
-# The C and CXX include file search paths:
-SET(CMAKE_C_INCLUDE_PATH
-  "/usr/local/opencv2.4.7/include/opencv"
-  "/usr/local/opencv2.4.7/include"
-  "include"
-  "include/FaceDetect"
-  "."
-  "idl"
-  "/usr/include/coil-1.1"
-  "/usr/include/openrtm-1.1"
-  "/usr/include/openrtm-1.1/rtm/idl"
-  "/usr/local/MATLAB/MATLAB_Compiler_Runtime/v81/extern/include"
-  )
-SET(CMAKE_CXX_INCLUDE_PATH ${CMAKE_C_INCLUDE_PATH})
-SET(CMAKE_Fortran_INCLUDE_PATH ${CMAKE_C_INCLUDE_PATH})
-SET(CMAKE_ASM_INCLUDE_PATH ${CMAKE_C_INCLUDE_PATH})
 
 # The C and CXX include file regular expressions for this directory.
 SET(CMAKE_C_INCLUDE_REGEX_SCAN "^.*$")

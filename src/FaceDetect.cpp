@@ -110,7 +110,7 @@ RTC::ReturnCode_t FaceDetect::onActivated(RTC::UniqueId ec_id)
 	//viewer flag
 	prevflg = 0;
 
-	cascadeName = "/usr/local/opencv2.4.7/share/OpenCV/haarcascades/haarcascade_frontalface_default.xml";
+	cascadeName = "/usr/local/opencv2.4.10/share/OpenCV/haarcascades/haarcascade_frontalface_default.xml";
 	if(!cascade.load(cascadeName))
 		return RTC::RTC_ERROR;	
   return RTC::RTC_OK;

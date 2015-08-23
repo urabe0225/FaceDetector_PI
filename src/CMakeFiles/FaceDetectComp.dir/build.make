@@ -31,6 +31,12 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
+# Escaping for special characters.
+EQUALS = =
+
+# The program to use to edit the cache.
+CMAKE_EDIT_COMMAND = /usr/bin/ccmake
+
 # The top-level source directory on which CMake was run.
 CMAKE_SOURCE_DIR = /home/hi-brain/workspace/FaceDetect
 
@@ -127,40 +133,40 @@ FaceDetectComp_EXTERNAL_OBJECTS =
 src/FaceDetectComp: src/CMakeFiles/FaceDetectComp.dir/FaceDetectComp.cpp.o
 src/FaceDetectComp: src/CMakeFiles/FaceDetectComp.dir/FaceDetect.cpp.o
 src/FaceDetectComp: src/CMakeFiles/FaceDetectComp.dir/hi_conversion.cpp.o
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_videostab.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_video.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_ts.a
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_superres.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_stitching.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_photo.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_ocl.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_objdetect.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_nonfree.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_ml.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_legacy.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_imgproc.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_highgui.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_gpu.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_flann.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_features2d.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_core.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_contrib.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_calib3d.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_nonfree.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_ocl.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_gpu.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_photo.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_objdetect.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_legacy.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_video.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_ml.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_calib3d.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_features2d.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_highgui.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_imgproc.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_flann.so.2.4.7
-src/FaceDetectComp: /usr/local/opencv2.4.7/lib/libopencv_core.so.2.4.7
 src/FaceDetectComp: src/CMakeFiles/FaceDetectComp.dir/build.make
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_videostab.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_video.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_ts.a
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_superres.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_stitching.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_photo.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_ocl.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_objdetect.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_nonfree.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_ml.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_legacy.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_imgproc.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_highgui.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_gpu.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_flann.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_features2d.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_core.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_contrib.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_calib3d.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_nonfree.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_ocl.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_gpu.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_photo.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_objdetect.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_legacy.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_video.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_ml.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_calib3d.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_features2d.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_highgui.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_imgproc.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_flann.so.2.4.10
+src/FaceDetectComp: /usr/local/opencv2.4.10/lib/libopencv_core.so.2.4.10
 src/FaceDetectComp: src/CMakeFiles/FaceDetectComp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable FaceDetectComp"
 	cd /home/hi-brain/workspace/FaceDetect/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FaceDetectComp.dir/link.txt --verbose=$(VERBOSE)
